@@ -9,8 +9,6 @@ import android.os.Handler;
 public class Splash extends AppCompatActivity {
     private static int WELCOME_TIME = 4000;
 
-    private Thread mSplashThread;
-
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {

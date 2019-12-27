@@ -82,7 +82,7 @@ public class LoggedActivity extends AppCompatActivity {
         }
 
         /*
-            chatRoom stuff
+            chatRoom
          */
         add_room = findViewById(R.id.btn_add_room);
         room_name = findViewById(R.id.room_name_edittext);
@@ -92,6 +92,9 @@ public class LoggedActivity extends AppCompatActivity {
 
         listView.setAdapter(arrayAdapter);
 
+        /*
+        This contructs a HashMap of using the new room name and adds it to the firebase database
+         */
         add_room.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,7 +105,9 @@ public class LoggedActivity extends AppCompatActivity {
 
             }
         });
-
+        /*
+        Adds a eventlistener to the root database so the code is able to know when a new room has been added
+         */
         root.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -127,6 +132,10 @@ public class LoggedActivity extends AppCompatActivity {
             }
         });
 
+        /*
+        adds a click listener to all the items in the listview ie all the rooms,if one of the rooms is clicked then the user is moved
+         to the databse child with the same name
+         */
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -141,7 +150,10 @@ public class LoggedActivity extends AppCompatActivity {
         });
 
     }
-
+    /*
+    This updates the user information with Hey (username) and loads their photo with picasso
+    if authentication failed the user is moved back to main activity
+     */
     private void updateUI(FirebaseUser user) {
 
         if (user != null) {
