@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "182486487052",
+    "firebase_url": "https://hoctest-b3243.firebaseio.com",
+    "project_id": "hoctest-b3243",
+    "storage_bucket": "hoctest-b3243.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182486487052:android:56af2e19cf7bfd2bcf1e29",
+        "android_client_info": {
+          "package_name": "com.example.hoctest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182486487052-qie7f30lk8f7p6adnf8f7p2vsh0af8os.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hoctest",
+            "certificate_hash": "57e741e5db3549d39fcad56df34332f067014ade"
+          }
+        },
+        {
+          "client_id": "182486487052-1bqqoh55d00nmium1dv46q1i11muu4fu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvC6vJ3YX88HLmtqPRzDe7HcADPJs9nRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182486487052-1bqqoh55d00nmium1dv46q1i11muu4fu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

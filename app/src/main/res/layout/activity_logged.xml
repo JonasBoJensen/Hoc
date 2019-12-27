@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:id="@+id/userInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_round">
+
+    <ImageView
+        android:id="@+id/user_Image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_firebase_logo"
+        android:contentDescription="@string/app_name"/>
+
+    <TextView
+        android:id="@+id/username_Info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/userInfo"
+        android:id="@+id/chatOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_round"
+        >
+
+        <EditText
+            android:id="@+id/room_name_edittext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            />
+
+        <Button
+            android:id="@+id/btn_add_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add room"
+
+            android:background="@drawable/bg_round"/>
+
+    </LinearLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_below="@id/userInfo"
+        android:layout_marginTop="50dp"
+        android:layout_above="@id/btn_Logout"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:id="@+id/btn_Logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:text="Logout"
+        android:textSize="15sp"
+        android:background="@drawable/bg_round"/>
+
+</RelativeLayout>

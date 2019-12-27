@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HoCTest</string>
+    <string name="facebook_app_id">449192169293228</string>
+    <string name="fb_login_protocol_scheme">fb449192169293228</string>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatRoomActivity">
+
+<!--    <include-->
+<!--        android:id="@+id/postAuthorLayout"-->
+<!--        layout="@layout/include_message_author"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true" />-->
+
+<!--    <include-->
+<!--        android:id="@+id/postTextLayout"-->
+<!--        layout="@layout/include_message_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_below="@+id/postAuthorLayout"-->
+<!--        android:layout_marginLeft="5dp"-->
+<!--        android:layout_marginTop="10dp" />-->
+
+    <LinearLayout
+        android:id="@+id/room_Info_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_round">
+
+        <ImageView
+            android:id="@+id/user_Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_firebase_logo"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/room_Info_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=" Room: "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_Back"
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/btn_send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/msg_Input"
+        android:layout_alignTop="@+id/btn_send"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btn_send"
+        />
+
+
+<!--    <ListView-->
+<!--        android:id="@+id/chat_ListView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/room_Info_bar"-->
+<!--        android:padding="15dp"-->
+<!--        android:layout_above="@+id/btn_send"-->
+<!--        android:textAppearance="?android:attr/textAppearanceLarge"-->
+<!--        tools:listitem="@layout/item_message"/>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/room_Info_bar"
+        android:layout_above="@id/btn_send"
+        tools:listitem="@layout/item_message" />
+
+
+<!--    <ProgressBar-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_toLeftOf="@+id/textView3"-->
+<!--        android:layout_toStartOf="@+id/textView3">-->
+<!--    </ProgressBar>-->
+
+<!--    <TextView-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:text="Loading"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:id="@+id/textView3" />-->
+</RelativeLayout>
